@@ -15,7 +15,7 @@ alias wrappedParams = SCWrappedParameterTypeTuple!f;
 alias secondArgsT = wrappedParams[1].base;
 
 // to get the unwrapped list back again:
-alias unwrapped = UnwrapStorageClasses(wrappedParams);
+alias unwrapped = UnwrapStorageClasses!(wrappedParams);
 // which should be identical to what you would get from
 // std.traits.ParameterTypeTuple
 ```
