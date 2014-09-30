@@ -1,5 +1,5 @@
 {
-    "name": "storageClassUtils",
+    "name": "storageclassutils",
     "description": "tools for wrapping and unwrapping storage classes such as ref",
     "authors": ["John Colvin"],
     "license": "BSL-1.0",
