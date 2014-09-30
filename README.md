@@ -22,14 +22,12 @@ alias unwrapped = UnwrapStorageClasses!(wrappedParams);
 
 A use case:
 ```D
-unittest
-{    
-    struct S(TL ...)
-    {
-        void f(UnwrapStorageClasses!TL p){}
-    }
-
-    S!(RefSC!int, float, ScopeSC!FD) s;
-
-    //s.f takes parameters (ref int, float, scope FD)
+struct S(TL ...)
+{
+    void f(UnwrapStorageClasses!TL p){}
 }
+
+S!(RefSC!int, float, ScopeSC!FD) s;
+
+//s.f takes parameters (ref int, float, scope FD)
+```
